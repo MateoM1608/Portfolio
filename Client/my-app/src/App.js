@@ -1,15 +1,16 @@
-import './App.css';
 import { Route, Routes} from "react-router-dom"
 import React from 'react';
-import Home from './components/Home/Home.jsx'
+import Landing from './components/Landing.jsx'
 
 function App() {
   return (
+    <div className="app_container">
     <Routes>
 
-      <Route exact path="/"  element={<Home />}  />
+     <Route exact path="/"  element={<Landing />}  />
 
     </Routes>
+    </div>
   );
 }
 

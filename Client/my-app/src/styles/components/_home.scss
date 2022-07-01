@@ -1,0 +1,93 @@
+
+.home_container{
+    background: linear-gradient(#403c5418, #18181fcc), url('https://i.postimg.cc/pTMQ8bBv/Dise-o-sin-t-tulo.png');
+    // background: color(rgba(255, 0, 0, 0.897)), url("https://i.postimg.cc/pTMQ8bBv/Dise-o-sin-t-tulo.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+// https://i.postimg.cc/m27KvBPx/Home.png
+
+.home_welcome{
+
+    h1{
+        font-family: $font;
+        font-size: 40px;
+        color: $primary;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: -30px;
+        
+    }
+    h2{
+        margin-left: 10px;
+        font-family: $font;
+        font-size: 50px;
+        color: $secondary;
+
+    }
+}
+
+
+.home_img{
+    height: 60%;
+}
+
+// .home_btn{
+    // font-family: $font;
+    // font-weight: 600;
+    // background-color: $secondary;
+    // color: $primary;
+    // border: 1px solid $secondary;
+    // font-size: 18px;
+    // border-radius: 10px;
+    // padding: 10px;
+    // cursor:pointer
+// }
+
+.home_btn {
+    font-family: $font;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 18px;
+    background-color: $secondary;
+    border-radius: 10px;
+    border: 1px solid $secondary;
+    color: $primary;
+    cursor:pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+  }
+  .home_btn:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: $primary;
+    z-index: -1;
+    -webkit-transition: width 150ms ease-in-out;
+    transition: width 150ms ease-in-out;
+  }
+  .home_btn:hover {
+    color: $secondary;
+  }
+  .home_btn:hover:after {
+    width: 110%;
+  }
